@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<head>
+<title>{Title}</title>
+
+<!--
+ |
+ |  Page #3 by raiidens (@ tumblr)
+ |  Published August 2016
+ |  Ver. 1.00
+ |
+ |  Edit as much as you like, but please do not
+ |  claim as your own work, and leave credit somewhere.
+ |
+ |  Notes:
+ |  1.  I tried to point out where most of the colour options are.
+ |      You can use ctrl+f to search for them or just look through.
+ |  2.  Ctrl+f "edit page title" to start customizing.
+ |      Use the template and the example to help you add the content in.
+ |
+ |  Credits:
+ |  Google Fonts - https://www.google.com/fonts
+ |  Isotope - http://isotope.metafizzy.co/
+ |  jQuery - https://jquery.com/
+ |  jQuery UI - https://jqueryui.com/
+ |  Masonry - http://masonry.desandro.com/
+ |
+ -->
+
+<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<style type="text/css">
+.tooltiptheme {
+    border-radius: 5px;
+    border: 0.5px solid #000000;
+    background: #FFFFFF;
+    color: #000000;
+    font-variant: small-caps;
+    font-size: 10pt;
+    line-height: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+    background: #DDDDDD;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    -webkit-border-radius: 0ex;
+    border: 2px double #DDDDDD;
+}
+
+.tmblr-iframe {display: none !important;}
+
+*::selection {background-color: #000000; color: #FFFFFF;}
+*::-moz-selection {background-color: #000000; color: #FFFFFF;}
+*::-webkit-selection {background-color: #000000; color: #FFFFFF;}
+
+html, body, p, h1, h2, h3, h4, h5, h6, blockquote {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+p {margin: 10px; margin-bottom:10px;}
+body {
+    background-color: #DDDDDD;      /* background colour */
+    color: #000000;     /* text colour */
+    font-family: 'Montserrat', sans-serif;
+	background-image: url('');      /* background image */
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+a {
+    color: #1111FF;     /* link colour */
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+a:hover {color: #000000;}       /* link hover colour */
+
+#headercont {
+    width: 410px;
+    margin: 20px auto;
+    margin-bottom: 60px;
+    padding: 20px;
+    padding-bottom: 40px;
+    background-color: #F9F906;      /* header background colour */
+    background-image: url('http://static.tumblr.com/o4povtk/KoVobawaj/pg3.jpg');    /* header background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: solid 5px #000000;
+}
+
+.headeri {
+    position: absolute;
+    margin-top: -20px;
+    margin-left: -20px;
+    width: 450px;
+    height: 150px;
+    //background-image: url('http://static.tumblr.com/o4povtk/VbYo9hu8o/pg2hdr1.png');     /* take the slashes out if you want that page thing from page 2 idrk what to call it but I thought I should leave it */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: "FlipH";
+    filter: FlipH;
+}
+
+#title {
+    position: relative;
+    font-family: 'Bangers', cursive;
+    font-size: 20pt;
+    text-align: center;
+    color: #000000;     /* header title colour */
+}
+
+#desc {
+    position: relative;
+    height: auto;
+    max-height: 53px;
+    padding-right: 10px;
+    overflow-y: auto;
+    font-size: 11pt;
+    color: #000000;     /* header description colour */
+}
+#desc::-webkit-scrollbar {
+    width: 5px;
+    height: 4px;
+    background: #888888;
+}
+#desc::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border: 0px;
+}
+
+#mlinkcont {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -17px;
+    -webkit-backface-visibility: hidden;
+    -ms-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
+
+.mlink {
+    position: relative;
+    width: 100px;
+    height: auto;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: #FFFFFF;      /* nav link background colour */
+    color: #000000;                 /* nav link text colour */
+    border: solid 2px #000000;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    float: left;
+    font-family: 'Bangers', cursive;
+    border-radius: 0px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.mlink:after, .mlink:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	pointer-events: none;
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.mlink:after {
+	border-color: rgba(0, 0, 0, 0);
+	border-top-color: #FFFFFF;
+	border-width: 0px;
+	margin-left: -15px;
+	margin-top: -1px;
+}
+.mlink:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-top-color: #000000;
+	border-width: 0px;
+	margin-left: -15px;
+}
+.mlink:hover {
+    background-color: #F3D131;
+    color: #000000;
+    border: solid 2px #000000;
+    border-radius: 10px;
+}
+.mlink:hover:after {
+    border-top-color: #F3D131;
+    border-width: 10px;
+	margin-left: -25px;
+}
+.mlink:hover:before {
+    border-top-color: #000000;
+	border-width: 13px;
+	margin-left: -28px;
+}
+.mlink a {color: #000000;}
+.mlink:hover a {color: #000000;}
+
+.itemcont {
+    margin: 0 auto;
+    width: 926px;
+}
+@media screen and (max-width: 800px) {
+    .itemcont {width: 740px;}
+}
+
+.item {
+    float: left;
+    margin: 15px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+
+.header {
+    position: relative;
+    width: 140px;
+    height: auto;
+    padding: 10px 5px;
+    text-align: center;
+    background-color: #F3D131;      /* category header background colour */
+                            /* and edit the background colour below too */
+    color: #000000;                 /* category header text colour */
+    border: solid 2px #000000;
+    font-family: 'Bangers', cursive;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.header:after, .header:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	pointer-events: none;
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.header:after {
+	border-color: rgba(0, 0, 0, 0);
+	margin-top: -1px;
+	border-top-color: #F3D131;  /* also category header background colour */
+    border-width: 10px;
+	margin-left: -50px;
+}
+.header:hover:after {
+    border-top-color: #FAE99E;  /* category header hover background colour */
+}
+.header:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-top-color: #000000;
+	border-width: 12px;
+	margin-left: -52px;
+}
+.header:hover {
+    background-color: #FAE99E;  /* same as above ^ */
+    color: #000000;
+    border: solid 2px #000000;
+}
+
+.listcont {
+    position: relative;
+    margin-top: -10px;
+    padding-top: 10px;
+    width: 152px;
+    max-height: 1500px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: solid 1px #000000;
+    overflow: hidden;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+.listcont a {text-decoration: none;}
+.listcontclosed {
+    max-height: 0px;
+    padding-top: 0px;
+}
+
+.link {
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 10pt;
+    padding: 8px;
+    color: #000000;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.linkeven {background-color: #DDDDDD;}
+
+.link:hover {
+    background-color: #BBBBBB;
+    padding-left: 18px;
+}
+</style>
+<script>
+$(document).tooltip({
+    track: true,
+    tooltipClass: "tooltiptheme"
+});
+</script>
+</head>
+<body>
+
+<div id="headercont"><div class="headeri"></div>
+    <div id="title">
+    
+        <!-- Edit page title below -->
+        
+            Tag list
+        
+        <!-- End page title -->
+            
+    </div>
+    <div id="desc">
+    
+        <!-- Edit page description below -->
+    
+            Your description goes here
+            
+            <br>Use this for a new line
+            
+            <br><b>Bold text</b> <i>Italic text</i> <u>Underlined text</u> <s>Strikethrough text</s> <a href="URL">Link</a>
+        
+        <!-- End description -->
+        
+    </div>
+    <div id="mlinkcont">
+        <a href="/"><div class="mlink">home</div></a>
+        <a href="/ask"><div class="mlink">ask</div></a>
+        <a href="http://tumblr.com"><div class="mlink">dash</div></a>
+        <a href="http://raiidens.tumblr.com/themesbyraiidens"><div class="mlink tooltip" title="by raiidens">theme</div></a>
+    </div>
+</div>
+
+<div class="itemcont">
+
+
+
+
+
+
+<!-- Edit content down here -->
+
+    <!-- Below is an example -->
+
+
+
+<div class="item">
+    <div class="header">Pull list</div>
+    <div class="listcont">
+        <a href="/tagged/batman"><div class="link">Batman</div></a>
+        <a href="/tagged/flash"><div class="link">The Flash</div></a>
+        <a href="/tagged/jl"><div class="link">Justice League</div></a>
+    </div>
+</div>
+
+
+
+
+
+    <!-- And here is a template, add as many as you want
+      |     Fill in the parts in all caps
+      |     You don't need to fill up all the links
+      |     And you can add more if you want
+    -->
+
+
+
+<div class="item">
+    <div class="header">HEADER TITLE</div>
+    <div class="listcont">
+        <a href="LINK URL"><div class="link">LINK TITLE</div></a>
+        <a href="LINK URL"><div class="link">LINK TITLE</div></a>
+        <a href="LINK URL"><div class="link">LINK TITLE</div></a>
+        <a href="LINK URL"><div class="link">LINK TITLE</div></a>
+        <a href="LINK URL"><div class="link">LINK TITLE</div></a>
+        <a href="LINK URL"><div class="link">LINK TITLE</div></a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- End content -->
+
+
+
+
+</div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="http://static.tumblr.com/o4povtk/Q89nxom8w/masonry.js"></script>
+<script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    
+    var $grid = $('.itemcont');
+    $grid.imagesLoaded(function() {
+        $grid.masonry({
+            itemSelector: ".item",
+            stagger: 30,
+        });
+    });
+    
+    $(".listcont").each(function(index) {
+        $(this).find(".link").each(function(index) {
+            if (index % 2 == 1)
+                $(this).addClass("linkeven");
+        });
+    });
+    
+    $(".header").click(function() {
+        $(this).parent().find(".listcont").toggleClass("listcontclosed");
+        setTimeout(function() {
+            $grid.masonry('layout');
+        }, 750);
+    });
+});
+</script>
+
+</html>
